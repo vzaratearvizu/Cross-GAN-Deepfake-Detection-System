@@ -20,7 +20,7 @@ How will it be done:
 
 
 ## Helpful Vocab
-- GAN: Generative Adversarial Network. Two models are fighting to fool each other. One model (discriminator) will act as a judge, looking at images and thinking "is this real? or is it fake?" while the other model (generator) generates fake images from random noise that may look like tv static. The generator will continue to produce fake images until it fools the discriminator into believing it is a real image. The end result is the generator itself that has been trained to fool the discriminator. We now have something to generate realistic fake image.
+- GAN: Generative Adversarial Network. Two models are fighting to fool each other. One model (discriminator) will act as a judge, looking at images and thinking "is this real? or is it fake?" while the other model (generator) generates fake images from random noise that may look like tv static. The generator will continue to produce fake images until it fools the discriminator into believing it is a real image. The end result is the generator itself that has been trained to fool the discriminator. We now have something to generate realistic fake image. The more complex and detailed an image is, the more difficult it is for a GAN to replicate.
 
 - ResNet: Residual Network. CNN model that's already been trained on 14 million images to recognize lots of different things. ResNet(Number Here) is how many layers the CNN model has. More layers mean it can learn more complex patterns
 
@@ -48,5 +48,7 @@ How will it be done:
     
     This process is applied to every 8x8 block in the image.
   - Reading The Coefficients Block: The cell at position 0 is called the DC coefficient while the other 63 coefficients are called AC. DC stands for direct current while AC stands for alternating current. DC represents the average brightness of the image while AC holds frequency details throughout the image.
+
+- Laplacian Distribution: A distribution made by Pierre-Simon Laplace. It's a statistical distribution which describes how a collection of numbers is spread out. There is a sharp peak in the middle with fatter tails on the sides. β (beta) is the resulting measurement of how spread out the values are. A small β means values are clustering near the center, so a sharp narrow shape. A large β means values are spread very widely, almost appearing both wide and flat. More values in the distribution creates a more reliable β measurement.
 
 - Gradient Boosting: A collection of decision trees, similar to random forest. Unlike random forest which builds trees independently and averages their results, gradient boosting is additive where each new tree learns from the previous tree, gradually improving the overall prediction. It does this by minimizing the gradient of the loss function, a measure of how wrong the prediction is.
