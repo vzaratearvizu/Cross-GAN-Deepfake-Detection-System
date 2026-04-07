@@ -1,0 +1,21 @@
+Noise Pattern Analysis Results
+
+Test Accuracy:  91.72%
+Test Precision: 90.24%
+Test Recall:    93.57%
+Test F1 Score:  91.87%
+Validation Accuracy: 91.44%
+Total Training Time: 34.0 minutes
+
+Confusion Matrix:
+                 Predicted Fake  Predicted Real
+Actual Fake      8988          1012
+Actual Real      643          9356
+
+Hyperparameters:
+- Image Size: (64, 64)
+- XGBoost n_estimators: 200
+- XGBoost max_depth: 6
+- XGBoost learning_rate: 0.1
+
+Dataset: datasets/real_vs_fake/real-vs-fake
