@@ -18,6 +18,19 @@ How will it be done:
 4) Test each detector on the same GAN it was trained on. Then test each detector on different GANs it has not seen to see if it will generalize
 5) Analyze results and see which method was more accurate and if we can combine methods to better detect deepfakes.
 
+## DCT + Gradient Boosting Findings
+
+| Train | Test | Train Acc | Test Acc | Difference |
+|---|---|---|---|---|
+| StyleGAN1 | StyleGAN1 | 73.53% | 70.41% | 3.13% |
+| StyleGAN1 | StyleGAN2 | 73.35% | 76.09% | 2.73% |
+| StyleGAN1 | Stable Diffusion | 73.53% | 42.05% | 31.48% |
+| StyleGAN2 | StyleGAN2 | 100.00% | 99.99% | 0.01% |
+| StyleGAN2 | StyleGAN1 | 100.00% | 49.99% | 50.01% |
+| StyleGAN2 | Stable Diffusion | 100.00% | 64.63% | 35.37% |
+| Stable Diffusion | Stable Diffusion | 92.99% | 91.40% | 1.59% |
+| Stable Diffusion | StyleGAN1 | 92.86% | 50.02% | 42.84% |
+| Stable Diffusion | StyleGAN2 | 92.77% | 59.74% | 33.03% |
 
 ## Helpful Vocab
 - GAN: Generative Adversarial Network. Two models are fighting to fool each other. One model (discriminator) will act as a judge, looking at images and thinking "is this real? or is it fake?" while the other model (generator) generates fake images from random noise that may look like tv static. The generator will continue to produce fake images until it fools the discriminator into believing it is a real image. The end result is the generator itself that has been trained to fool the discriminator. We now have something to generate realistic fake image. The more complex and detailed an image is, the more difficult it is for a GAN to replicate.

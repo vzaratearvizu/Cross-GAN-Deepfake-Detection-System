@@ -1,0 +1,35 @@
+Experiment: Cross-GAN Generalization
+Train Dataset: sfhq-part3 (StyleGAN2)
+Test Dataset: stable-diffusion-dataset (Stable Diffusion V1.5)
+Train images: 60000
+Test images: 20000
+
+Train Accuracy: 100.00%
+Test Accuracy: 64.63%
+Difference (overfit check): 35.37%
+GB n_estimators: 100
+GB learning_rate: 0.6
+GB max_depth: 2
+Color Type: Black & White
+
+Classification Report:
+              precision    recall  f1-score   support
+
+        Real       0.83      0.37      0.51     10000
+        Fake       0.59      0.92      0.72     10000
+
+    accuracy                           0.65     20000
+   macro avg       0.71      0.65      0.62     20000
+weighted avg       0.71      0.65      0.62     20000
+
+Confusion Matrix:
+                  Predicted Real  Predicted Fake
+  Actual Real     3703            6297
+  Actual Fake     777             9223
+
+True Positives  (Fake correctly detected): 9223
+True Negatives  (Real correctly detected): 3703
+False Positives (Real misclassified as Fake): 6297
+False Negatives (Fake misclassified as Real): 777
+
+Total Time: 170.29 minutes

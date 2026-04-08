@@ -1,0 +1,35 @@
+Experiment: Cross-GAN Generalization
+Train Dataset: flickr-gan-dataset (StyleGAN1)
+Test Dataset: sfhq-part3 (StyleGAN2)
+Train images: 60000
+Test images: 20000
+
+Train Accuracy: 73.35%
+Test Accuracy: 76.09%
+Difference (overfit check): 2.73%
+GB n_estimators: 100
+GB learning_rate: 0.6
+GB max_depth: 2
+Color Type: Black & White
+
+Classification Report:
+              precision    recall  f1-score   support
+
+        Real       0.78      0.73      0.75     10000
+        Fake       0.74      0.80      0.77     10000
+
+    accuracy                           0.76     20000
+   macro avg       0.76      0.76      0.76     20000
+weighted avg       0.76      0.76      0.76     20000
+
+Confusion Matrix:
+                  Predicted Real  Predicted Fake
+  Actual Real     7253            2747
+  Actual Fake     2036            7964
+
+True Positives  (Fake correctly detected): 7964
+True Negatives  (Real correctly detected): 7253
+False Positives (Real misclassified as Fake): 2747
+False Negatives (Fake misclassified as Real): 2036
+
+Total Time: 88.85 minutes
